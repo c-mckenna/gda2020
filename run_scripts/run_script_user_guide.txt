@@ -68,7 +68,7 @@ STEP 1 - Download APREF cumulative solution files
 ------	
 STEP 2 - Post-process the APREF cumulative solution
 ------
-+ run_APREF_STEP_2.sh.
++ run_APREF_POST_PROCESSING.sh.
 + Recently has taken ~21 hours (mostly in sinex2epoch).
 + This part of the process relies on two existing files in /apref/workDir/.
 	1. gda2020.dat.
@@ -77,12 +77,12 @@ STEP 2 - Post-process the APREF cumulative solution
 	# On GDA2020 machine:
 	
 		>>> cd ~/run_scripts/
-		>>> vim run_APREF_STEP_2.sh 
+		>>> vim run_APREF_POST_PROCESSING.sh 
 		
 		NOW: edit the APREF solution date at top of script.
 	
 		>>> [ESC] :wq	
-		>>> nohup ./run_APREF_STEP_2.sh &
+		>>> nohup ./run_APREF_POST_PROCESSING.sh &
 
 ------	
 STEP 3 - Upload post-processed APREF
