@@ -6,7 +6,7 @@ GDA2020 ROUTINE PROCESSING
   is designed to be followed by a user when conducting any part of the processing. Bash/CLI commands 
   are identified by the '>>>' marker where they can be copy and pasted into the terminal.
 
-+ The routine processing is made up of 4 seperate procedures:
++ The routine processing is made up of 4 separate procedures:
 	1. UPDATE THE APREF CUMULATIVE SOLUTION.
 	2. NGCA PROCESSING.
 	3. JADJ QA/QC.
@@ -168,8 +168,8 @@ STEP 1 - Download the archives
 	
 		>>> get_ngca.py -j <jurisdiction>
 	
-+ Ask Carl to increase the amount of available ec2s for AUSPOS (usually upto 300 or 600).
-+ Currently have to give Carl our tempprary IP adress for the gda2020 machine.
++ Ask Carl to increase the amount of available EC2s for AUSPOS (usually up to 300 or 600).
++ Currently have to give Carl our temporary IP address for the gda2020 machine.
 	- Note: should change our gda2020 machine to have a static IP. 
 	- Note: should change method of connection to session manager.  
 	
@@ -292,7 +292,7 @@ STEP 5 - Finish NGCA
 			* the archive(s) will be the last file(s) listed.
 			* worth checking the size of the .zip file for basic check. 
 
-	NOW: email jurisiction(s). 
+	NOW: email jurisdiction(s).
 	NOW: if all NGCA is complete, turn off gda2020 machine.
 	
 
@@ -314,7 +314,7 @@ Machines: 	NADJ Windows (National Geodesy) / NADJ Linux (when NADJ issue is solv
 	3. 1-iteration adjustment
 + Jurisdictional adjustment data are only excluded from the national adjustment if they 
   cause the 1-iteration to fail dramatically. It is hard to define what failure is here. 
-  For example, sometimes large station shifts occur, but they are ligitamite because they 
+  For example, sometimes large station shifts occur, but they are legitimate because they
   are caused by improved data included by the jurisdiction. It is best to check with the 
   jurisdiction if unsure. Another definition of failure could be to check the sigma-0 value. 
   If it is > 50 than something could be wrong. Fifty is an uninformed guess for a quality 
@@ -506,8 +506,8 @@ Machines: 	NADJ Windows (National Geodesy) / NADJ Linux (when NADJ issue is solv
 
 		>>> aws s3 cp gda2020_YYYYMMDD.zip s3://gda2020-ngca/adjustments/
 
-		NOTE: - Can think about a schedule here to arhicve the older ones. For example, could keep
-			the latest ten adjustements there, and move the older ones to long-term storage.
+		NOTE: - Can think about a schedule here to archive the older ones. For example, could keep
+			the latest ten adjustments there, and move the older ones to long-term storage.
 		      - Email the AWG. 
 		
 
