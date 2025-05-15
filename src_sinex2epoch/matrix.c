@@ -674,6 +674,7 @@ MATRIX mat_mul(MATRIX A, MATRIX B)
       return (NULL);
     }
 
+  #pragma omp parallel for private(i, j, k)
   for (i = 0; i < MatRow(A); i++)
     {
       for (j = 0; j < MatCol(B); j++)
